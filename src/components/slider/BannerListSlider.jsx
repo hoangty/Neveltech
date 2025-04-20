@@ -17,10 +17,10 @@ const BannerListSlider = ({ items }) => {
         speed={1000}
         centeredSlides
         loopedSlides={4}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         pagination={{ clickable: true }}
         loop={true}
       >

@@ -17,10 +17,10 @@ const GameListSlider = ({ items }) => {
         spaceBetween={16}
         slidesPerView={'auto'}
         navigation
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{ clickable: true }}
         loop={true}
       >
