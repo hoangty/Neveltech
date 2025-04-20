@@ -15,31 +15,32 @@ const GameListSlider = ({ items }) => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={16}
-        slidesPerView={1}
+        slidesPerView={'auto'}
         navigation
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 3 },
-          768: { slidesPerView: 6 },
-          1024: { slidesPerView: 8 }
-        }}
         loop={true}
       >
         {items.map((item, index) => (
-          <SwiperSlide key={index}>
-            <a className="relative overflow-hidden md:block rounded-lg" href={items.href}>
+          <SwiperSlide key={index} className='w-[156px]'>
+            <a className="relative md:block" href={items.href}>
               <img
                 src={item.image}
                 alt={item.publisher}
-                className="w-full"
+                className="w-full overflow-hidden rounded-lg"
               />
               {item.hot ?
                 <span className='w-[36px] absolute top-[15px] left-[-3px]'>
                   <img src={Hot} alt="HOT" />
+                </span>
+                : ''
+              }
+              {item.news ?
+                <span className='w-[36px] absolute top-[15px] left-[-3px]'>
+                  <img src={New} alt="new" />
                 </span>
                 : ''
               }

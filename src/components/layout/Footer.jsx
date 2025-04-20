@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { FaTelegramPlane, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import appIos from '../../assets/images/common/ios.png';
 import appAndroid from '../../assets/images/common/android.png';
+import { SlArrowDown } from "react-icons/sl";
+import { SlArrowUp } from "react-icons/sl";
+const social = require.context('../../assets/images/social/', false, /\.(png|jpe?g|svg)$/);
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -35,18 +38,20 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#12294A] text-white py-10 px-2 md:px-6">
-      <div className="w-[1440px] mx-auto space-y-6 md:space-y-0 md:grid md:grid-cols-5 md:gap-8 items-start">
+    <footer className="bg-[#12294A] text-white py-24 md:px-2 px-10 md:px-6">
+      <div className="max-w-[1440px] mx-auto space-y-6 md:space-y-0 md:grid md:grid-cols-[200px_auto_auto_auto_160px] md:gap-[80px] items-start">
 
         <div className="md:hidden space-y-4">
           {Object.entries(accordionData).map(([title, items]) => (
-            <div key={title} className="bg-[#132e57] rounded-md">
+            <div key={title} className="bg-[#1A3157] rounded-md">
               <button
                 className="w-full text-left px-4 py-3 font-semibold flex justify-between items-center"
                 onClick={() => toggleSection(title)}
               >
                 {title}
-                <span className="text-lg">{openSection === title ? '−' : '+'}</span>
+                <span className='text-lg'>
+                  {openSection === title ? <SlArrowUp /> : <SlArrowDown />}
+                </span>
               </button>
               {openSection === title && (
                 <ul className="px-4 pb-3 space-y-2 text-gray-300">
@@ -69,10 +74,12 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="bg-[#132e57] p-4 rounded-md space-y-2">
-            <p className="font-bold">Help Center</p>
-            <p className="text-gray-300">If you have any questions?</p>
-            <button className="bg-[#4361ee] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#3a52c6] w-full">
+          <div className="bg-[#132e57] py-4 px-8 rounded-md space-y-2 flex gap-5">
+            <div className="w-full">
+              <p className="font-meium">Help Center</p>
+              <p className="text-gray-300">If you have any questions?</p>
+            </div>
+            <button className="bg-[#4361ee] text-white text-[13px] w-[116px] rounded-lg px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#3a52c6] w-full">
               GET ANSWERS
             </button>
           </div>
@@ -90,16 +97,24 @@ const Footer = () => {
         </div>
 
         <div className="hidden md:block">
-          <h4 className="font-bold text-2xl mb-2">Help Center</h4>
-          <p className="mb-4 text-gray-300">If you have any questions?</p>
-          <button className="md:block bg-[#3555FF] text-white px-4 py-3 rounded-[10px] text-[13px, 24px] w-full mb-20 hover:bg-[#3a52c6]">
+          <h4 className="font-medium text-[24px] mb-5">Help Center</h4>
+          <p className="mb-5 text-gray-300">If you have any questions?</p>
+          <button className="md:block bg-[#3555FF] text-white px-5 py-4 rounded-[10px] text-[13px, 24px] w-full mb-16 hover:bg-[#3a52c6]">
             GET ANSWERS
           </button>
-          <div className="flex space-x-3 text-xl">
-            <FaTelegramPlane className="hover:text-[#00b2ff] cursor-pointer" />
-            <FaFacebookF className="hover:text-[#1877f2] cursor-pointer" />
-            <FaInstagram className="hover:text-[#e1306c] cursor-pointer" />
-            <FaTwitter className="hover:text-[#1da1f2] cursor-pointer" />
+          <div className="flex gap-6 space-x-3 text-xl">
+            <a href="#" className='w-[30px] hover:opacity-70 transition' target='_blank'>
+              <img src={social('./icon_tele.png')} alt="" />
+            </a>
+            <a href="#" className='w-[30px] hover:opacity-70 transition' target='_blank'>
+              <img src={social('./icon_facebook.png')} alt="" />
+            </a>
+            <a href="#" className='w-[30px] hover:opacity-70 transition' target='_blank'>
+              <img src={social('./icon_instagram.png')} alt="" />
+            </a>
+            <a href="#" className='w-[30px] hover:opacity-70 transition' target='_blank'>
+              <img src={social('./icon_twitter.png')} alt="" />
+            </a>
           </div>
         </div>
 
@@ -117,16 +132,16 @@ const Footer = () => {
         ))}
 
         <div className="hidden md:grid md:grid-cols-2 gap-2 items-start">
-          <a className="bg-[#132e57] rounded-[10px] col-span-2 flex items-center py-[6px] px-[18px] hover:bg-[#314e79] duration-300" href='#'>
-            <img src={appIos} alt="Apple" className="w-4.2 h-4.2" />
+          <a className="bg-[#132e57] rounded-[10px] col-span-2 flex items-center py-[4px] px-[11px] hover:bg-[#314e79] duration-300" href='#'>
+            <img src={appIos} alt="Apple" className="w-16 h-16" />
             <span className="text-[15px]">Bluechip App for Mac OS</span>
           </a>
           <a className="bg-[#1A3157] rounded-[10px] block text-center text-[#90A2BD] hover:bg-[#314e79] duration-300" href='#'>
-            <img src={appAndroid} alt="Android" className="w-4.2 h-4.2 mx-auto" />
+            <img src={appAndroid} alt="Android" className="w-16 h-16 mx-auto" />
             <p>Android</p>
           </a>
           <a className="bg-[#1A3157] rounded-[10px] block text-center text-[#90A2BD] hover:bg-[#314e79] duration-300" href='#'>
-            <img src={appIos} alt="iOS" className="w-4.2 h-4.2 mx-auto" />
+            <img src={appIos} alt="iOS" className="w-16 h-16 mx-auto" />
             <p>iOS</p>
           </a>
         </div>

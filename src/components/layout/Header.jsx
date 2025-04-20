@@ -1,5 +1,8 @@
 import React from 'react';
+import { useState } from "react";
 import logo from '../../assets/images/common/logo.png';
+import iconSearch from '../../assets/images/icon/icon_search.png'
+import iconHamburger from '../../assets/images/icon/icon_hamburger.png'
 
 const navItems = [
   { label: 'HOME', href: '/' },
@@ -11,31 +14,58 @@ const navItems = [
 ];
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <header className="w-full h-20 bg-[#0A0A0A] flex items-center justify-between px-6 shadow-lg">
-      {/* Logo */}
-      <div className="flex items-center space-x-2">
-        <img src={logo} alt="Casino Logo" className="h-10" />
-        <span className="text-white text-xl font-semibold">Casino</span>
-      </div>
-
-      {/* Navigation */}
-      <nav className="flex items-center space-x-8">
-        {navItems.map((item, index) => (
-          <a
-            key={index}
-            href={item.href}
-            className="text-white hover:text-yellow-400 transition"
+    <header className="relative w-full flex items-center px-6 py-4 z-100 bg-[#03193A]">
+      <div className=" max-w-[1440px] w-full mx-auto flex items-center justify-between ">
+        <div className="flex">
+          <button
+            className="block focus:outline-none mr-5 w-11"
+            onClick={() => setOpen(!open)}
           >
-            {item.label}
-          </a>
-        ))}
-      </nav>
+            <img src={iconHamburger} alt="" />
+          </button>
 
-      {/* User Actions */}
-      <div className="flex items-center space-x-4">
-        <button className="text-white border border-white rounded-full px-4 py-1 hover:bg-white hover:text-black transition">Login</button>
-        <button className="bg-yellow-400 text-black font-bold rounded-full px-4 py-1 hover:bg-yellow-300 transition">Register</button>
+          <a className="flex items-center space-x-2" href='/'>
+            <img src={logo} alt="Casino Logo" className="w-[72px]" />
+          </a>
+
+          <a href="#" className='ml-[55px] w-12'>
+            <img src={iconSearch} alt="icon search" />
+          </a>
+
+          <nav className="hidden md:flex items-center gap-10 ml-[32px]">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className="text-white hover:text-yellow-400 transition"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+        {open && (
+          <ul className="md:hidden mt-4 space-y-2 fixed top-10 left-0 bg-[#ccc] w-full h-full">
+            {navItems.map((item, index) => (
+              <li>
+              <a
+                key={index}
+                href={item.href}
+                className="text-white hover:text-yellow-400 transition"
+              >
+                {item.label}
+              </a>
+              </li>
+            ))}
+        </ul>
+        )}
+
+        <div className="flex items-center space-x-4">
+          <button className="text-white rounded-[10px] px-4 py-3 bg-[#12294A] hover:bg-white hover:text-black transition">LOGIN</button>
+          <button className="text-white rounded-[10px] px-4 py-3 bg-[#01AF70] hover:bg-[#01AF70] transition">REGISTRATION</button>
+        </div>
       </div>
     </header>
   );

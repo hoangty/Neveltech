@@ -46,7 +46,7 @@ const BannerListData = [
 ];
 const gameList = () => (
     <section className="providers px-10 space-y-[12px] space-x-[12px] py-10">
-      <div className="w-[1200px] mx-auto">
+      <div className="max-w-[1200px] mx-auto">
         <BannerListSlider items={BannerListData} />
       </div>
     </section>

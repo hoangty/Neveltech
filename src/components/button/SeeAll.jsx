@@ -3,8 +3,8 @@ import { TbGridDots } from "react-icons/tb";
 
 const SeeAll = ({ link }) => {
     return (
-        <a href={link}  className='text-xl md:flex items-center'>
-            <span className='mr-2'>SEE ALL</span>
+        <a href={link}  className='text-xl flex items-center hover:opacity-80 duration-200 text-[18px]'>
+            <span className='mr-3 text-[15px]'>SEE ALL</span>
             <TbGridDots />
         </a>
     )
