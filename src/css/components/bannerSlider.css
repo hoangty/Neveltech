@@ -1,0 +1,14 @@
+.swiper {
+    overflow: visible;
+}
+.swiper-slide {
+    &.active {
+        opacity: 1;
+    }
+}
+
+@media (--pc) {
+    .swiper-pagination {
+        display: none;
+    }
+}

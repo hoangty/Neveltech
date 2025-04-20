@@ -1,0 +1,45 @@
+@function rem($num) {
+  @return $num/10 + rem;
+}
+
+@mixin media($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mediaPC {
+  @media (min-width: #{$pc}px) {
+    @content;
+  }
+}
+
+@mixin mediaPCSmall {
+  @media (max-width: #{$pcSmall}px) {
+    @content;
+  }
+}
+
+@mixin mediaIpadBig {
+  @media (max-width: #{$ipadBig}px) {
+    @content;
+  }
+}
+
+@mixin mediaIpad {
+  @media (max-width: #{$ipad}px) {
+    @content;
+  }
+}
+
+@mixin mediaSP {
+  @media (max-width: #{$sp}px) {
+    @content;
+  }
+}
+
+@mixin mediaSPSmall {
+  @media (max-width: #{$spSmall}px) {
+    @content;
+  }
+}
