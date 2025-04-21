@@ -56,13 +56,13 @@ const gameListData = [
     }
   ];
 const gameList = () => (
-    <section className="providers px-10 space-y-[12px] space-x-[12px] py-14">
+    <section className="px-10 space-y-[12px] space-x-[12px] py-14">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex justify-between mx-auto mb-16">
-          <h2 className="text-[32px] font-medium">Exclusive Games</h2>
+          <h2 className="text-2xl md:text-[32px] font-medium">Exclusive Games</h2>
           <SeeAll link={'#'}/>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden -mr-10 md:mr-0">
           <GameListSlider items={gameListData} />
         </div>
       </div>

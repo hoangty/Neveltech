@@ -1,15 +1,23 @@
-.banner .swiper {
-    overflow: visible;
-}
-.banner .swiper .swiper-slide {
-    opacity: 0.3;
-    &-active {
-        opacity: 1;
+.banner {
+    .swiper {
+        overflow: visible;
     }
-}
-
-@media (--pc) {
+    .swiper-slide {
+        opacity: 0.3;
+        transition: opacity 0.3s ease-out;
+        &-active {
+            opacity: 1;
+        }
+    }
     .swiper-pagination {
-        display: none;
-    }
+        position: static;
+        margin-top: 1.2vw;
+        &-bullet {
+            background: #fff;
+            opacity: 0.4 !important;
+            &-active {
+                opacity: 1 !important;
+            }
+        }
+    } 
 }

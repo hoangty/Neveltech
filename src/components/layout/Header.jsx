@@ -26,11 +26,11 @@ const Header = () => {
             <img src={iconHamburger} alt="" />
           </button>
 
-          <a className="flex items-center space-x-2" href='/'>
+          <a className="flex items-center space-x-2 hover:opacity-70 duration-300" href='/'>
             <img src={logo} alt="Casino Logo" className="w-[72px]" />
           </a>
 
-          <a href="#" className='ml-[55px] w-12'>
+          <a href="#" className='hidden md:block ml-[55px] w-12 hover:opacity-70 duration-300'>
             <img src={iconSearch} alt="icon search" />
           </a>
 
@@ -39,7 +39,7 @@ const Header = () => {
               <a
                 key={index}
                 href={item.href}
-                className="text-white hover:text-yellow-400 transition"
+                className="text-white hover:text-yellow-400 transition duration-300"
               >
                 {item.label}
               </a>
@@ -63,8 +63,8 @@ const Header = () => {
         )}
 
         <div className="flex items-center space-x-4">
-          <button className="text-white rounded-[10px] px-4 py-3 bg-[#12294A] hover:bg-white hover:text-black transition">LOGIN</button>
-          <button className="text-white rounded-[10px] px-4 py-3 bg-[#01AF70] hover:bg-[#01AF70] transition">REGISTRATION</button>
+          <button className="text-white rounded-[10px] px-4 py-3 bg-[#12294A] hover:bg-white hover:text-black duration-300">LOGIN</button>
+          <button className="text-white rounded-[10px] px-4 py-3 bg-[#01AF70] hover:bg-[#176e4f] duration-300">REGISTRATION</button>
         </div>
       </div>
     </header>

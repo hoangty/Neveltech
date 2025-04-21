@@ -4,7 +4,7 @@ const icon = require.context('../../assets/images/icon', false, /\.(png|jpe?g|sv
 
   const Service = () => (
     <section className="mb-xl pt-lg">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-3 md:grid-cols-7 gap-[10px] border-b border-[rgba(255,255,255,0.04)] pb-[30px] px-5 md:px-0">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-3 md:grid-cols-7 gap-[10px] border-b border-[rgba(255,255,255,0.04)] pb-[30px] px-4 md:px-0">
         <a href="#" className='flex md:hidden justify-center items-center rounded-lg overflow-hidden h-[57px] p-4 bg-[#12294A] border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.3)] duration-200'>
           <img className='w-[24px] mr-[13px]' src={icon('./icon_search.png')} alt="" />
           <p className=''>Search</p>

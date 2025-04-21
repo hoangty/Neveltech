@@ -35,7 +35,7 @@ const ProvidersListSlider = ({ items }) => {
                 <a
                 key={index}
                 href={item.href}
-                className="block text-center rounded-lg overflow-hidden group hover:opacity-90 transition bg-[#12294A]"
+                className="block text-center rounded-lg overflow-hidden group hover:opacity-70 duration-200 bg-[#12294A]"
                 >
                 <figure className='pt-5 pb-[22px]'>
                     <img

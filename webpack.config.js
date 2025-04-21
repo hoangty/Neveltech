@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
     output: {
       path: path.resolve(__dirname, 'docs'),
       filename: "bundle.[contenthash].js",
-      publicPath: "/Neveltech/",
+      publicPath: "/",
     },
     resolve: {
       extensions: [".js", ".jsx"],

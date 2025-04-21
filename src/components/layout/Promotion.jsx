@@ -54,10 +54,10 @@ const promotionData = [
     }
   ];
 const Promotion = () => (
-    <section className="providers md:px-2 py-10 pb-16 pt-6 pb-10 space-y-[12px] space-x-[12px]">
+    <section className="providers px-6 md:px-2 py-10 pb-16 pt-6 pb-10 space-y-[12px] space-x-[12px]">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex justify-between mb-16">
-          <h2 className="text-[32px] font-medium">All Providers</h2>
+          <h2 className="text-2xl md:text-[32px] font-medium">All Providers</h2>
           <SeeAll link={'#'}/>
         </div>
         <div className="md:px-[54px]">
