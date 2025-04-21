@@ -2,13 +2,15 @@ import React from 'react';
 import BannerListSlider from '../slider/BannerListSlider';
 
 const images = require.context('../../assets/images/banner/', false, /\.(png|jpe?g|svg)$/);
+import '../../css/components/bannerSlider.css';
+
 const BannerListData = [
   {
     title: 'Piggy Christmas Tap: €35,000 For Your Wins',
     href: '#',
     link: 'JOIN AND WIN',
     tag: 'Exclusive Tournament',
-    gradient: ['#147261', '#082C25'],
+    gradient: 'gradient01',
     image: images('./banner01.png')
   },
   {
@@ -16,7 +18,7 @@ const BannerListData = [
     href: '#',
     link: 'JOIN AND WIN',
     tag: 'Exclusive Tournament',
-    gradient: ['#284DCE', '#0C1741'],
+    gradient: 'gradient02',
     image: images('./banner02.png')
   },
   {
@@ -24,7 +26,7 @@ const BannerListData = [
     href: '#',
     link: 'JOIN AND WIN',
     tag: 'Exclusive Tournament',
-    gradient: ['#284DCE', '#0C1741'],
+    gradient: 'gradient03',
     image: images('./banner03.png')
   },
   {
@@ -32,7 +34,7 @@ const BannerListData = [
     href: '#',
     link: 'JOIN AND WIN',
     tag: 'Exclusive Tournament',
-    gradient: ['#284DCE', '#0C1741'],
+    gradient: 'gradient04',
     image: images('./banner04.png')
   },
   {
@@ -40,12 +42,12 @@ const BannerListData = [
     href: '#',
     link: 'JOIN AND WIN',
     tag: 'Exclusive Tournament',
-    gradient: ['#26002F', '#590FB7'],
+    gradient: 'gradient05',
     image: images('./banner05.png')
   },
 ];
 const gameList = () => (
-    <section className="providers px-10 space-y-[12px] space-x-[12px] py-10">
+    <section className="banner px-10 space-y-[12px] space-x-[12px] py-10">
       <div className="max-w-[1200px] mx-auto">
         <BannerListSlider items={BannerListData} />
       </div>

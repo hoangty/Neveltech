@@ -16,6 +16,21 @@ main {
   position: relative;
   z-index: 10;
 }
+.gradient01 {
+  background: linear-gradient(90deg, #147261, #082C25);
+}
+.gradient02 {
+  background: linear-gradient(90deg, #284DCE, #0C1741);
+}
+.gradient03 {
+  background: linear-gradient(90deg, #284DCE, #0C1741);
+}
+.gradient04 {
+  background: linear-gradient(90deg, #284DCE, #0C1741);
+}
+.gradient05 {
+  background: linear-gradient(90deg, #26002F, #590FB7);
+}
 
 .bg-linear-to-r {
   --tw-gradient-position: to right in oklab;
