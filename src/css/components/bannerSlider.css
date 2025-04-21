@@ -1,8 +1,9 @@
-.swiper {
+.banner .swiper {
     overflow: visible;
 }
-.swiper-slide {
-    &.active {
+.banner .swiper .swiper-slide {
+    opacity: 0.3;
+    &-active {
         opacity: 1;
     }
 }

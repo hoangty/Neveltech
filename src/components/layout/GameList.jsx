@@ -41,13 +41,13 @@ const gameListData = [
     {
       publisher: 'VeliPlay',
       href: '#',
-      hot: true,
-      image: images('./img07.jpg')
+      image: images('./img08.jpg')
     },
     {
       publisher: 'VeliPlay',
       href: '#',
-      image: images('./img08.jpg')
+      hot: true,
+      image: images('./img07.jpg')
     },
     {
       publisher: 'VeliPlay',
@@ -56,9 +56,9 @@ const gameListData = [
     }
   ];
 const gameList = () => (
-    <section className="providers px-10 space-y-[12px] space-x-[12px] py-10">
-      <div className="w-[1440px] mx-auto">
-        <div className="md:flex justify-between mx-auto mb-8">
+    <section className="providers px-10 space-y-[12px] space-x-[12px] py-14">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="flex justify-between mx-auto mb-16">
           <h2 className="text-[32px] font-medium">Exclusive Games</h2>
           <SeeAll link={'#'}/>
         </div>

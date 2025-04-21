@@ -7,7 +7,7 @@ import Service from '../../components/layout/Service';
 
 const Home = () => {
   return (
-    <div className="bg-[#03193A] text-white overflow-hidden">
+    <div className="bg-[#03193A] text-white overflow-hidden z-10">
       <Banner />
       <Service />
       <GameList />

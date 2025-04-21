@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import iconHelp from '../../assets/images/icon/icon_help.png';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../../css/components/bannerSlider.css';
 
 const BannerListSlider = ({ items }) => {
     return (
@@ -17,18 +17,21 @@ const BannerListSlider = ({ items }) => {
         speed={1000}
         centeredSlides
         loopedSlides={4}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{ clickable: true }}
         loop={true}
       >
         {items.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="banner-slider relative flex items-center">
-                <div className={`rounded-[30px] banner-bg bg-linear-to-r from-[${item.gradient[0]}] to-[${item.gradient[1]}] w-full h-full absolute top-0 left-0 z-11`}></div>
-                <div className="p-xl w-full relative flex flex-col items-center z-22">
+          <SwiperSlide key={index} className='translation'>
+            <div className="banner-slider relative flex flex-col-reverse items-center md:flex-row pb-4 md:p-0">
+                <div className={`${item.gradient} rounded-[30px] w-full h-full absolute top-0 left-0 z-11 border border-white/20`}></div>
+                <a href="#" className='w-4 block absolute top-10 right-10 z-10'>
+                  <img src={iconHelp} alt="" />
+                </a>
+                <div className="p-xl w-full relative flex flex-col items-center z-22 px-10">
                     <p className='rounded-full py-2 px-5 bg-[rgba(255,255,255,0.1)]'>{item.tag}</p>
                     <h2 className="text-white text-[42px]/[1.4] text-center font-extrabold mt-4">{item.title}</h2>
                     <a className="md:block text-[21px]/[40px] py-[5px] bg-[#FF0960] w-[340px] text-center mt-6" href={item.href}>{item.link}</a>
