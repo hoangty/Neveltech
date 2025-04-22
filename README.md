@@ -35,6 +35,7 @@ npm run build
 ###  🧩 Folder Structure
 
 
+```
 ├── public/              # Static public assets
 ├── src/
 │   ├── assets/          # images
@@ -46,8 +47,14 @@ npm run build
 ├── webpack.config.js    # Webpack configuration
 └── package.json 
 
+```
+
 ###  🧰 Scripts
 
 Script | Description
+
+```
 npm run dev | Start dev server with HMR
 npm run build | Build for production
+
+```
