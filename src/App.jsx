@@ -12,7 +12,7 @@ const App = () => {
         <Header />
         <main className="flex-1">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Neveltech/" element={<Home />} />
             <Route path="/game/:id" element={<GameDetail />} />
           </Routes>
         </main>
